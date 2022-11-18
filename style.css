@@ -25,13 +25,13 @@ body{
 /* HEADER */
 header{
     height: 100px;
-    /* position: fixed;
+    position: fixed;
     top: 0;
     right: 0;
-    left: 100px; */
+    left: 100px;
 
     border: 2px dashed purple;
-    background-color: violet;
+    background-color: rgba(80, 80, 80, 0.5);
 }
 /* MAIN */
 main{
@@ -40,10 +40,10 @@ main{
     flex-basis: calc(100% - 100px);
 }
 .contents{
-    padding: 20px;
+    padding-top: 100px;
     /* margin: 100px 0; */
     overflow-y: auto;
-    height: calc(100% - 100px);
+    height: 100%;
     
 }
 /* FOOTER */
@@ -54,4 +54,13 @@ footer{
     left: 0;
     right: 0;
     bottom: 0; */
+}
+/*********** --RESPONSIVE-- ************/
+@media screen and (min-width: 639px) {
+    .sidebar{
+        flex-basis: 300px;
+    }
+    header{
+        left: 200px;
+    }
 }
