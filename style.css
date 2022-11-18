@@ -1,0 +1,24 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+/* GENERIC */
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+/* UTILITY */
+
+
+/* top-content */
+.top-content{
+    height: calc(100vh - 200px);
+    background-color: pink;
+}
+/* HEADER */
+/* MAIN */
+/* FOOTER */
+footer{
+    height: 200px;
+    background-color: grey;
+}
