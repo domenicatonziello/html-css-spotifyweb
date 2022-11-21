@@ -16,41 +16,153 @@
 </head>
 <body>
     <!-- TOP CONTENT -->
-    <div class="top-content">
-        <div class="sidebar">
-            <ul class="icons">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-            <ul class="titles">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
+    <div class="top-content flex">
+        <!-- sidebar -->
+        <div class="sidebar flex">
+            <div class="sidebar-top">
+                <ul>
+                    <li> 
+                        <a href="#">  
+                            <img class="tablet-none" src="img/logo-small.svg" alt="logo-spotify">
+                            <img class="tablet-block logo" src="img/logo.svg" alt="logo-spotify">
+                        </a>
+                    </li>
+                    <li> 
+                        <a href="#">  
+                            <img src="img/home.svg" alt="home">
+                            <span class="label"> Home </span>
+                        </a>
+                    </li>
+                    <li> 
+                        <a href="#">  
+                            <img src="img/search.svg" alt="search">
+                            <span class="label"> Cerca</span>
+                        </a>
+                    </li>
+                    <li> 
+                        <a href="#">  
+                            <img src="img/libreria.svg" alt="libreria">
+                            <span class="label"> La tua libreria </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="playlist tablet-block">
+                <h4>PLAYLIST</h4>
+                <ul>
+                    <li class="new-playlist">
+                        <a href="#">
+                            <i class="fa-sharp fa-solid fa-square-plus fa-2x"></i>
+                            <span class="label"> Crea Playlist </span>
+                        </a>
+                    </li>
+                    <li> <a href="#" class="label"> Nome Playlist </a> </li>
+                    <li> <a href="#" class="label"> Nome Playlist </a> </li>
+                    <li> <a href="#" class="label"> Nome Playlist </a> </li>
+                    <li> <a href="#" class="label"> Nome Playlist </a> </li>
+                    <li> <a href="#" class="label"> Nome Playlist </a> </li>
+                    <li> <a href="#" class="label"> Nome Playlist </a> </li>
+                    <li> <a href="#" class="label"> Nome Playlist </a> </li>
+                </ul>
+            </div>
+            <div class="sidebar-bottom">
+                <ul>
+                    <li> 
+                        <a href="#"> 
+                            <img class="img-small" src="img/download.svg" alt="download">
+                            <span class="label"> Installa app</span>
+                        </a>
+                    </li>
+                    <li> 
+                        <a href="#">            
+                           <figure class="profile">
+                               <img src="img/profile.svg" alt="profile">
+                            </figure>
+                            <div class="label">John Doe</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <!-- MAIN -->
         <main>
             <!-- HEADER -->
-            <header></header>
-             <div class="contents">
+            <header> 
+                <a href="#" class="btn"> Effettua l'upgrade </a>
+            </header>
+            <div class="contents">
                 <nav>
-                    <ul class="navigation">
-                        <li> In evidenza </li>
-                        <li> Podcast </li>
-                        <li> Classifiche </li>
-                        <li> Generi e mood </li>
-                        <li> Nuove uscite </li>
-                        <li> Scopri </li>
+                    <ul class="navbar row">
+                        <li>
+                            <a href="#"> In evidenza</a>
+                        </li>
+                        <li>
+                            <a href="#"> Podcast</a>
+                        </li>
+                        <li>
+                            <a href="#"> Classifiche </a>
+                        </li>
+                        <li>
+                            <a href="#"> Generi e mood</a>
+                        </li>
+                        <li>
+                            <a href="#"> Nuove uscite</a>
+                        </li>
+                        <li>
+                          <a href="#"> Scopri</a>
+                        </li>
                     </ul>
-                </nav>
-             </div>
+               </nav>
+               <div class="recently">
+                 <h2> Recently playled </h2>
+                 <div class="row">
+                    <div class="column">
+                        <div class="card"> 
+                            <img src="img/metal_lifting.jpg" alt="metal_lifting">
+                            <h4> Heavy Metal </h4>
+                            <span> subtitle</span>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="card">
+                            <img src="img/stranger.jpeg" alt="stranger things">
+                            <h4> Stranger Things, vol 1(a Netflix Original Series Soundtrack)</h4>
+                            <span> Kyle Dixon & Michael Stein</span>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="card"></div>
+                    </div>
+                    <div class="column">
+                        <div class="card"></div>
+                    </div>
+                    <div class="column">
+                        <div class="card"></div>
+                    </div>
+                    <div class="column">
+                        <div class="card"></div>
+                    </div>
+                 </div>
+               </div>
+            </div>
         </main>
     </div>
     <!-- BOTTOM CONTENT -->
-    <footer></footer>
+    <footer>
+        <div class="song">
+            <figure class="cover">
+                <img src="img/sinister.jpeg" alt="sinister">
+            </figure>
+            <div>
+                <div class="artist"> <h6> Sinister</h6></div>
+                <ul class="title flex"> 
+                    <li> Brano </li>
+                    <li> Nome</li>
+                </ul>
+            </div>
+        </div>
+        <div class="time"></div>
+        <div class="volume"></div>
+    </footer>
     
 </body>
 </html>

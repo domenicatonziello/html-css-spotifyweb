@@ -6,84 +6,188 @@
 /* GENERIC */
 body{
     font-family: 'Montserrat', sans-serif;
+    color: white;
 }
-
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: gray ;
+}
 /* UTILITY */
 
-
-/* top-content */
+.tablet-block{
+    display: none;
+}
+.flex{
+    display: flex;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+/* top content */
 .top-content{
     height: calc(100vh - 100px);
-    display: flex;
-    /* background-color: pink; */
 }
+/* sidebar */
 .sidebar{
-    flex-basis: 50px;
-    height: 100% ;
-    background-color: blue;
-}
-.icons{
-    border: 2px dashed yellow;
-}
-.titles{
-    display: none ;
-    border: 2px dashed green;
+    flex: 0 0 50px;
+    background-color: rgb(0,0,0);
 
+    flex-direction: column;
+    justify-content: space-between;
 }
+.sidebar-top li:first-child img{
+    margin-bottom: 15px;
+}
+.sidebar img{
+    max-width: 100%;
+    margin: 5px 10px;
+
+    vertical-align: middle;
+}
+
+.label{
+    display: none;
+    font-weight: 600;
+    
+}
+/* sidebar bottom */
+.sidebar .img-small{
+    width: 35%;
+    margin: 15px;
+}
+.profile{
+    height: 25px;
+    width: 25px;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: grey;
+    margin: 15px;
+
+    display: inline-block;
+    vertical-align: middle;
+}
+.profile img{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+/* PLAYLIST */
+.playlist h4{
+    margin-bottom: 10px;
+}
+.fa-square-plus{
+    vertical-align: middle;
+}
+.playlist {
+    padding: 15px;
+    overflow-y: auto;
+}
+.playlist ul > *{
+    margin-bottom: 15px;
+}
+
 /* HEADER */
 header{
     height: 100px;
-    position: fixed;
+    position: sticky;
     top: 0;
     right: 0;
-    left: 50px;
-
-    border: 2px dashed purple;
-    background-color: rgba(80, 80, 80, 0.5);
+    
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: right;
 }
+.btn{
+    padding: 15px 40px;
+    border: 2px solid white;
+    border-radius: 30px;
+
+    text-transform: uppercase;
+    font-weight: 700;
+    color: white;
+
+    line-height: 100px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
 /* MAIN */
 main{
-    background-color: pink;
-    border: 2px dashed red;
-    flex-basis: calc(100% - 50px);
-
-
+    flex: 1 1 auto;
+    background-color: rgb(20,25,34);
+    overflow: auto;
 }
-.contents{
-    padding-top: 100px;
-
-    overflow-y: auto;
-    height: 100%;  
-}
-.navigation{
-    border: 1px dashed black;
-
-    padding: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    list-style-type: none;
+/* navbar */
+.navbar{
     justify-content: center;
-    align-items: center;
 }
-.navigation li{
+.navbar li{
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+/* contents */
+.contents{
+    padding: 10px;
+}
+.recently .row{
+    margin: -10px;
+}
+.column{
+    flex-basis: 50%;
     padding: 10px;
 
+    min-height: 100px;
+    border: 1px dashed white;
+}
+.card{
+    text-align: center;
+}
+.card >* {
+    margin-bottom: 10px;
+}
+.card img{
+    width: 100%;
+    margin: 20px auto;
 }
 /* FOOTER */
 footer{
     height: 100px;
-    background-color: grey;
-    /* position: sticky;
-    left: 0;
-    right: 0;
-    bottom: 0; */
+    background-color: rgb(40, 40, 40);
+    color: black;
 }
-/*********** --RESPONSIVE-- ************/
+
+/******** --RESPONSIVE-- ********/
 @media screen and (min-width: 639px) {
+    /* UTILITY */
+    .tablet-block{
+        display: block;
+    }
+    .tablet-none{
+        display: none;
+    }
+    /* SIDEBAR */
     .sidebar{
-        flex-basis: 300px;
+        flex-basis: 250px;
     }
-    header{
-        left: 250px;
+    .sidebar .logo{
+        width: 70%;
     }
+    .sidebar img{
+        width: 15%;
+    }
+    .label{
+        display: inline;
+    }
+    .sidebar .img-small{
+        width: 10%;
+    }
+    .profile img{
+        width: 100%;
+    }
+    
 }
