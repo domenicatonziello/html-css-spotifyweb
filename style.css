@@ -52,7 +52,16 @@ a{
 }
 
 /* sidebar top */
+.sidebar-top{
+    height: calc(100% - 100px);
+    
+    overflow-y: hidden;
+}
+.sidebar-bottom{
+    height: 100px;
+}
 .sidebar{
+
     flex: 0 0 50px;
     background-color: rgb(0,0,0);
 
@@ -107,14 +116,15 @@ a{
     cursor:text;
 }
 /* PLAYLIST */
+.playlist{
+    height: 50%;
+    overflow-y: auto;
+}
 .playlist h4{
     margin-bottom: 10px;
 }
 .fa-square-plus{
     vertical-align: middle;
-}
-.playlist {
-    overflow-y: auto;
 }
 .playlist ul > li{
     margin-bottom: 15px;
