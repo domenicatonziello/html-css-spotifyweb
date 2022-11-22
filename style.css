@@ -57,11 +57,7 @@ a{
     
     overflow-y: hidden;
 }
-.sidebar-bottom{
-    height: 100px;
-}
 .sidebar{
-
     flex: 0 0 50px;
     background-color: rgb(0,0,0);
 
@@ -87,6 +83,9 @@ a{
 }
 
 /* sidebar bottom */
+.sidebar-bottom{
+    height: 100px;
+}
 .sidebar-bottom img{
     padding: 0;
     margin: 15px;
