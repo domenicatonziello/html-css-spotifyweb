@@ -16,7 +16,6 @@ a{
     color: gray ;
 }
 /* UTILITY */
-
 .tablet-block{
     display: none;
 }
@@ -27,11 +26,23 @@ a{
     display: flex;
     flex-wrap: wrap;
 }
+.line{
+    height: 3px;
+    width: 40px;
+    background-color: rgb(147,216,45);
+    border-radius: 20px;
+}
+.label{
+    display: none;
+    font-weight: 600; 
+}
+
 /* top content */
 .top-content{
     height: calc(100vh - 100px);
 }
-/* sidebar */
+
+/* sidebar top */
 .sidebar{
     flex: 0 0 50px;
     background-color: rgb(0,0,0);
@@ -39,25 +50,31 @@ a{
     flex-direction: column;
     justify-content: space-between;
 }
-.sidebar-top li:first-child img{
-    margin-bottom: 15px;
-}
 .sidebar img{
     max-width: 100%;
-    margin: 5px 10px;
+
+    padding: 10px;
 
     vertical-align: middle;
 }
 
-.label{
-    display: none;
-    font-weight: 600;
-    
+.sidebar li{
+    position: relative;
 }
+.sidebar-top .line{
+   transform: rotate(90deg);
+   position: absolute;
+   left: -33px;
+   bottom: 22px;
+}
+
 /* sidebar bottom */
-.sidebar .img-small{
-    width: 35%;
+.sidebar-bottom img{
+    padding: 0;
     margin: 15px;
+}
+.sidebar .img-small{
+    width: 40%;
 }
 .profile{
     height: 25px;
@@ -76,6 +93,7 @@ a{
     height: 100%;
     margin: 0;
 }
+
 /* PLAYLIST */
 .playlist h4{
     margin-bottom: 10px;
@@ -84,10 +102,9 @@ a{
     vertical-align: middle;
 }
 .playlist {
-    padding: 15px;
     overflow-y: auto;
 }
-.playlist ul > *{
+.playlist ul > li{
     margin-bottom: 15px;
 }
 
@@ -121,6 +138,7 @@ main{
     background-color: rgb(20,25,34);
     overflow: auto;
 }
+
 /* navbar */
 .navbar{
     justify-content: center;
@@ -130,6 +148,12 @@ main{
     text-transform: uppercase;
     font-weight: bolder;
 }
+.navbar .line{
+    position: relative;
+    top: 0;
+    left: 35px;
+}
+
 /* contents */
 .contents{
     padding: 10px;
@@ -174,6 +198,7 @@ main{
     object-fit: cover;
     margin: 0 auto;
 }
+
 /* FOOTER */
 footer{
     height: 100px;
@@ -185,6 +210,7 @@ footer{
     align-items: center;
     gap: 10px;
 }
+
 /* song */
 .song.flex{
     flex-basis: 25%;
@@ -204,6 +230,7 @@ footer{
     padding-bottom: 5px;
     margin-left: 10px;
 }
+
 /* time */
 .time{
     flex-basis: 50%;
@@ -240,6 +267,7 @@ footer{
     font-weight: 600;
     color: white;
 }
+
 /* volume */
 .volume{
     flex-basis: 25%;
@@ -249,7 +277,7 @@ footer{
 }
 
 /******** --RESPONSIVE-- ********/
-/* S */
+/* small screen */
 @media screen and (min-width: 639px) {
     /* UTILITY */
     .tablet-block{
@@ -258,7 +286,10 @@ footer{
     .tablet-none{
         display: none;
     }
-    /* SIDEBAR */
+    .label{
+        display: inline;
+    }
+    /* SIDEBAR top*/
     .sidebar{
         flex-basis: 250px;
     }
@@ -266,16 +297,27 @@ footer{
         width: 70%;
     }
     .sidebar img{
+        padding: 0;
+        margin: 10px 0;
+
         width: 15%;
     }
-    .label{
-        display: inline;
+    .sidebar li{
+        margin: 0 15px;
+    }
+    /* sidebar-bottom */
+    .sidebar-bottom li:last-child{
+        border-top: 1px solid white;
     }
     .sidebar .img-small{
         width: 10%;
     }
+    .profile{
+        margin: 15px 0;
+    }
     .profile img{
         width: 100%;
+        margin: 0;
     }
     /* FOOTER */
     .title{
@@ -285,7 +327,7 @@ footer{
         padding-right: 5px;
     }
 }
-/* md */
+/* medium screen */
 @media screen and (min-width: 878px){
     /* MAIN */
     .column{
@@ -296,7 +338,7 @@ footer{
         flex-direction: row;
     }
 }
-/* lg */
+/* large screen*/
 @media screen and (min-width: 1200px){
     /* MAIN */
     .column{
@@ -304,12 +346,12 @@ footer{
     }
     /* FOOTER */
     .song.flex{
-        flex-basis: 20%;
+        flex-basis: 230px;
     }
     .time{
-        flex-basis: 60%;
+        flex-basis: 50%;
     }
     .volume{
-        flex-basis: 20%;
+        flex-basis: 230px;
     }
 }
